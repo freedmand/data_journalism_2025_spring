@@ -133,8 +133,7 @@ To do that by hand, we'd have to take each of the 79,366 individual rows (or obs
 umd_courses |>
   group_by(term) |>
   summarize(
-    count_classes = n(),
-    count_classes_but_again = n()
+    count_classes = n()
   )
 ```
 
@@ -223,7 +222,7 @@ umd_courses |>
     min_seats = min(seats),
     max_seats = max(seats)
   ) |>
-  arrange(min_seats)
+  arrange(desc(mean_seats))
 ```
 
 Compared to the previous codeblock, what has changed and how did that affect the result? How is the data sorted?
@@ -234,7 +233,7 @@ Compared to the previous codeblock, what has changed and how did that affect the
 
 No code here; I want you to provide three questions that this data suggests to you. What would you like to ask it?
 
-**Answer**
+**Answer**...
 
 1.  
 
